@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pouf</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+    <model-viewer id="modelViewer" src="./assets/glb/3.glb" ios-src="./assets/Model1.usdz"
+        alt="A 3D model of an airplane" ar ar-scale='' animation-name="" ar-modes='webxr quick-look' camera-controls>
+        <!-- <div class="container" id="container">
+            <div id="ripple" class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div> -->
+        <button slot="ar-button" id="ar-button">
+            View in AR
+        </button>
+    </model-viewer>
+    <!-- <script>
+        let mV = document.getElementById('modelViewer')
+        let btn = document.getElementById('ar-button')
+        let container = document.getElementById('container')
+        let ripple = document.getElementById('ripple')
+        mV.addEventListener('load', () => {
+            btn.style.display = 'block'
+            ripple.style.display = 'none'
+        })
+        btn.addEventListener('click', () => {
+            console.log('click')
+            container.style.display = 'none'
+        })
+
+        mV.addEventListener('ar-status', (e) => {
+            if (e.detail.status === 'not-presenting') {
+                container.style.display = 'block'
+            }
+
+        })
+    </script> -->
+</body>
+
+</html>
